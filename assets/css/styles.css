@@ -5,6 +5,22 @@
    Type: Space Grotesk (display) / DM Sans (body)
    ========================================================================== */
 
+/* ---------- Self-hosted fonts (no third-party requests) ---------- */
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/dm-sans.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("../fonts/space-grotesk.woff2") format("woff2");
+}
+
 /* ---------- Tokens ---------- */
 :root {
   /* Light surfaces */
