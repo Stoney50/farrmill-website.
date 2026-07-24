@@ -193,8 +193,8 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", system-ui, sans-serif; line-heigh
 .header-inner { width: 100%; max-width: var(--container-wide); margin-inline: auto; padding-inline: clamp(1.15rem, 4vw, 2.5rem);
   display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
 .brand { display: inline-flex; align-items: center; }
-.brand img { height: 40px; width: auto; transition: height .3s var(--ease); }
-.is-scrolled .brand img { height: 33px; }
+/* Constant logo height (no scaling during the header transition = stays crisp) */
+.brand img { height: 38px; width: auto; }
 .brand .logo-dark { display: none; }         /* colour logo — shown when header is white */
 .is-scrolled .brand .logo-light { display: none; }
 .is-scrolled .brand .logo-dark { display: block; }
