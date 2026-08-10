@@ -307,8 +307,8 @@ body.nav-open .nav-toggle span::after { transform: translateY(-6px) rotate(-45de
   background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: .8rem 1.05rem; box-shadow: 0 20px 45px rgba(0,0,0,.3); }
 .float-chip .ic { width: 42px; height: 42px; border-radius: 12px; background: var(--tint); color: var(--green-ink); display: grid; place-items: center; flex: none; }
 .float-chip .ic svg { width: 24px; height: 24px; }
-.float-chip b { font-family: "Space Grotesk", sans-serif; font-size: .98rem; color: var(--text); display: block; line-height: 1.2; }
-.float-chip span { font-size: .78rem; color: var(--text-dim); }
+.float-chip b { font-family: "Space Grotesk", sans-serif; font-size: .98rem; color: #16211A; display: block; line-height: 1.2; }
+.float-chip span { font-size: .78rem; color: #66726A; }
 @media (max-width: 480px) { .float-chip { right: 6px; } }
 
 /* ---------- Trust strip ---------- */
