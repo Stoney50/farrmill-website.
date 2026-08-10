@@ -152,6 +152,7 @@
     var form = doc.querySelector("[data-booking-form]");
     if (form) {
       var successBox = doc.querySelector("[data-form-success]");
+      var errorBanner = doc.querySelector("[data-form-error]");
 
       /* ---- Anti-spam plumbing ----
          Layered, defence-in-depth signals. These stop the overwhelming majority
@@ -252,20 +253,47 @@
         var btn = form.querySelector("[type=submit]");
         var original = btn ? btn.innerHTML : "";
         if (btn) { btn.disabled = true; btn.innerHTML = "Sending…"; }
+        if (errorBanner) errorBanner.classList.remove("show");
 
-        // Simulated submit (front-end demo). Wire to Laravel/email endpoint on launch.
-        setTimeout(function () {
-          if (successBox) {
-            form.style.display = "none";
-            successBox.classList.add("show");
-            successBox.setAttribute("tabindex", "-1");
-            successBox.focus();
-            successBox.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
-          } else {
+        // Real submit via Web3Forms (https://web3forms.com) — no backend required.
+        var accessKey = form.getAttribute("data-web3forms-key");
+        var payload = {
+          access_key: accessKey,
+          subject: (form.querySelector('[name="subject"]') || {}).value || "New booking request — Farrmill website",
+          from_name: (form.querySelector('[name="from_name"]') || {}).value || "Farrmill website",
+          botcheck: "" // Web3Forms' own honeypot: always blank for real users
+        };
+        ["first_name", "last_name", "phone", "email", "suburb", "service", "date", "time", "message"].forEach(function (name) {
+          var el = form.querySelector('[name="' + name + '"]');
+          if (el) payload[name] = el.value;
+        });
+
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(payload)
+        })
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
+            if (!data || !data.success) throw new Error((data && data.message) || "Submission failed");
+            if (successBox) {
+              form.style.display = "none";
+              successBox.classList.add("show");
+              successBox.setAttribute("tabindex", "-1");
+              successBox.focus();
+              successBox.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+            } else {
+              form.reset();
+            }
+          })
+          .catch(function (err) {
+            if (window.console && console.error) console.error("Booking form submission failed:", err);
             if (btn) { btn.disabled = false; btn.innerHTML = original; }
-            form.reset();
-          }
-        }, 900);
+            if (errorBanner) {
+              errorBanner.classList.add("show");
+              errorBanner.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+            }
+          });
       });
     }
   });

@@ -17,7 +17,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <link rel="preload" href="assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="assets/css/styles.css?v=16" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=17" />
 </head>
 <body>
 
@@ -98,7 +98,7 @@
               <h2 style="font-size:var(--fs-h3);margin-top:1rem;">Request your appointment</h2>
               <p style="color:var(--text-soft);margin-top:.4rem;font-size:.95rem;">Tell us a bit about the job and your preferred timing. We'll call or email to confirm — usually the same day.</p>
 
-              <form class="form-card" data-booking-form novalidate autocomplete="on" style="box-shadow:none;border:0;padding:1.6rem 0 0;margin:0;background:transparent;">
+              <form class="form-card" data-booking-form data-web3forms-key="64cdd9f4-fbf7-4097-baec-dec3b9d15ee5" novalidate autocomplete="on" style="box-shadow:none;border:0;padding:1.6rem 0 0;margin:0;background:transparent;">
                 <!-- Honeypot: hidden from real users; bots fill it and get rejected. Do not remove. -->
                 <div class="hp-field" aria-hidden="true">
                   <label for="company_website">Company website (leave blank)</label>
@@ -106,6 +106,11 @@
                 </div>
                 <input type="hidden" name="form_loaded_at" data-loaded-at value="" />
                 <input type="hidden" name="human_verified" data-human-token value="" />
+                <!-- Web3Forms' own server-side honeypot — catches bots that skip our page's JS
+                     entirely and POST straight to the API. Do not remove. -->
+                <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+                <input type="hidden" name="subject" value="New booking request — Farrmill website" />
+                <input type="hidden" name="from_name" value="Farrmill website booking form" />
 
                 <div class="form-row">
                   <div class="field">
@@ -185,6 +190,10 @@
                 <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY"></div>
                 -->
 
+                <div class="form-error-banner" data-form-error role="alert" aria-live="assertive">
+                  Something went wrong sending your request. Please try again, or call us directly on <a href="tel:+61411240281">0411 240 281</a>.
+                </div>
+
                 <button type="submit" class="btn btn--lg btn--block">
                   Request my appointment
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -258,6 +267,6 @@
   </div>
 
   <style>@media (max-width: 860px){ .contact-grid{ grid-template-columns:1fr !important; } }</style>
-  <script src="assets/js/main.js?v=16" defer></script>
+  <script src="assets/js/main.js?v=17" defer></script>
 </body>
 </html>

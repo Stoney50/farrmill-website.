@@ -439,6 +439,10 @@ img.media-illustration { width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
 .hp-field { position: absolute !important; left: -9999px !important; top: auto; width: 1px; height: 1px; overflow: hidden; }
 .hp-field input { pointer-events: none; }
+.form-error-banner { display: none; background: #FDF3F1; border: 1.5px solid #E0736A; color: #A23B2E; border-radius: 12px;
+  padding: .9rem 1.05rem; font-size: .9rem; margin-bottom: 1.15rem; }
+.form-error-banner a { color: #A23B2E; font-weight: 700; text-decoration: underline; }
+.form-error-banner.show { display: block; }
 .cf-turnstile { margin: .5rem 0 1.15rem; }
 .form-success { display: none; text-align: center; padding: 1rem 0; }
 .form-success.show { display: block; animation: pop .5s var(--ease-out); }
