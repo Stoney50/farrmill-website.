@@ -21,6 +21,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.farrmill.com.au/pest-control-armadale.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.farrmill.com.au/pest-control-canning-vale.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.farrmill.com.au/pest-control-thornlie.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.farrmill.com.au/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
