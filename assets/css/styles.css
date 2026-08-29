@@ -270,7 +270,7 @@ body.nav-open .nav-toggle span::after { transform: translateY(-6px) rotate(-45de
   background:
     linear-gradient(120deg, rgba(8,15,10,.90) 0%, rgba(8,15,10,.78) 45%, rgba(8,15,10,.88) 100%),
     radial-gradient(55% 60% at 82% 5%, rgba(138,207,99,.18), transparent 60%),
-    url("../img/ute-hero-golden.jpg") center 58% / cover no-repeat;
+    url("../img/ute-hero-golden.webp") center 58% / cover no-repeat;
 }
 .hero--photo .hero-aurora, .hero--photo .topo { display: none; }
 .hero .container { position: relative; z-index: 1; }
