@@ -1,0 +1,35 @@
+# Permanent (301) redirects. Cloudflare serves pages at clean URLs (/services),
+# and on its own would answer /services.html with a temporary 307.
+
+# Old .html addresses -> clean URLs
+/index.html                          /                            301
+/about.html                          /about                       301
+/contact.html                        /contact                     301
+/services.html                       /services                    301
+/termites.html                       /termites                    301
+/privacy.html                        /privacy                     301
+/terms.html                          /terms                       301
+/pest-control-armadale.html          /pest-control-armadale       301
+/pest-control-byford.html            /pest-control-byford         301
+/pest-control-canning-vale.html      /pest-control-canning-vale   301
+/pest-control-cannington.html        /pest-control-cannington     301
+/pest-control-kelmscott.html         /pest-control-kelmscott      301
+/pest-control-maddington.html        /pest-control-maddington     301
+/pest-control-southern-river.html    /pest-control-southern-river 301
+/pest-control-thornlie.html          /pest-control-thornlie       301
+
+# Old Webflow site URLs still known to Google
+/services/termite-control            /termites                    301
+/services/general-pest-control       /services                    301
+/services/rodent-pest-control        /services                    301
+/services/pigeon-control             /services                    301
+/general-pest-control                /services                    301
+/legal/privacy-policy                /privacy                     301
+/posts/termite-reticulation-systems  /termites                    301
+/blogs                               /                            301
+/latest-posts                        /                            301
+/category/termites-2                 /termites                    301
+/team-members/*                      /about                       301
+/posts/*                             /                            301
+/blog/*                              /                            301
+/category/*                          /services                    301

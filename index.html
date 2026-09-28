@@ -36,19 +36,19 @@
   {
     "@context": "https://schema.org",
     "@type": "PestControlService",
+    "@id": "https://www.farrmill.com.au/#business",
     "name": "Farrmill Pest Control",
     "image": "https://www.farrmill.com.au/assets/img/farrmill-logo.png",
     "telephone": "+61411240281",
     "email": "info@farrmill.com.au",
     "url": "https://www.farrmill.com.au/",
     "priceRange": "$$",
-    "areaServed": "Gosnells and Greater Perth, Western Australia",
+    "areaServed": ["Gosnells", "Thornlie", "Canning Vale", "Armadale", "Southern River", "Maddington", "Kelmscott", "Byford", "Cannington", "Perth WA"],
     "address": { "@type": "PostalAddress", "addressLocality": "Gosnells", "addressRegion": "WA", "addressCountry": "AU" },
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "16:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "13:00" }
     ],
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5" },
     "foundingDate": "1993",
     "slogan": "Local, licensed and thorough — pest control done properly."
   }
@@ -65,11 +65,11 @@
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="/" aria-current="page">Home</a>
-        <a href="services.html">Services</a>
-        <a href="termites.html">Termites</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn" href="contact.html#book">Book an inspection</a>
+        <a href="/services">Services</a>
+        <a href="/termites">Termites</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a class="btn" href="/contact#book">Book an inspection</a>
       </nav>
       <div class="header-cta">
         <a class="header-phone" href="tel:+61411240281" aria-label="Call 0411 240 281">
@@ -103,7 +103,7 @@
             <h1 data-reveal>Termites &amp; pests<br>don't wait.<br><span class="hl">Neither do we.</span></h1>
             <p class="hero-lead" data-reveal>Locally owned, fully licensed and genuinely thorough. Since 1993, Farrmill has protected Perth's south-east from termites, rodents and every pest in between — with straight answers, no upsell, and lasting results.</p>
             <div class="hero-cta" data-reveal>
-              <a class="btn btn--lg" href="contact.html#book">
+              <a class="btn btn--lg" href="/contact#book">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
                 Book an inspection
               </a>
@@ -143,7 +143,7 @@
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Barrier &amp; baiting treatment plans</li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Pre-purchase &amp; annual reports</li>
               </ul>
-              <a class="link-arrow" href="termites.html" style="margin-top:1.5rem;">Explore termite management
+              <a class="link-arrow" href="/termites" style="margin-top:1.5rem;">Explore termite management
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
             </div>
@@ -178,48 +178,48 @@
             <h2>Complete protection, <span class="text-gradient">under one local roof</span></h2>
             <p>From a single ant problem to a full termite management program, we handle it all — thoroughly, safely, and with advice you can actually trust.</p>
           </div>
-          <a class="link-arrow" href="services.html">All services
+          <a class="link-arrow" href="/services">All services
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
 
         <div class="grid cols-3 mt-3" data-stagger data-stagger-delay="90">
-          <a href="termites.html" class="card service-card card--feature">
+          <a href="/termites" class="card service-card card--feature">
             <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <h3>Termite Management</h3>
             <p>Inspections, barrier treatments, reticulation systems and baiting programs. Termite damage is often invisible until it's expensive — regular inspection is the cheapest insurance your home has.</p>
             <span class="card-link link-arrow">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </a>
 
-          <a href="services.html#general" class="card service-card">
+          <a href="/services#general" class="card service-card">
             <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke-linecap="round"/></svg></div>
             <h3>General Pest Control</h3>
             <p>Ants, cockroaches, spiders, silverfish and more — comprehensive treatments that keep the home comfortable year-round.</p>
             <span class="card-link link-arrow">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </a>
 
-          <a href="services.html#rodents" class="card service-card">
+          <a href="/services#rodents" class="card service-card">
             <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="7.5" cy="14.5" r="4.5"/><path d="M11 12c1-4 4-6 7-6 2 0 3 1 3 2s-1 2-3 2M16 8.5h.01" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 18h6" stroke-linecap="round"/></svg></div>
             <h3>Rodent Control</h3>
             <p>Rats and mice managed with secure baiting, exclusion and proofing so they don't come back through the same gaps.</p>
             <span class="card-link link-arrow">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </a>
 
-          <a href="services.html#spiders" class="card service-card">
+          <a href="/services#spiders" class="card service-card">
             <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M12 9V4M12 15v5M9 12H3M15 12h6M9.5 9.5L5 5M14.5 9.5L19 5M9.5 14.5L5 19M14.5 14.5L19 19" stroke-linecap="round"/></svg></div>
             <h3>Spiders &amp; Wasps</h3>
             <p>Redbacks, whitetails, webbing spiders and wasp nests treated around entertaining areas, eaves and yards.</p>
             <span class="card-link link-arrow">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </a>
 
-          <a href="services.html#commercial" class="card service-card">
+          <a href="/services#commercial" class="card service-card">
             <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M6 21V8l6-4 6 4v13" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 21v-5h4v5M9 11h.01M15 11h.01" stroke-linecap="round"/></svg></div>
             <h3>Commercial &amp; Strata</h3>
             <p>Discreet, compliant programs for restaurants, offices, real estate and strata — with documentation to match.</p>
             <span class="card-link link-arrow">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </a>
 
-          <a href="services.html#fleas" class="card service-card">
+          <a href="/services#fleas" class="card service-card">
             <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="10" r="1.6"/><circle cx="10" cy="6.4" r="1.6"/><circle cx="14" cy="6.4" r="1.6"/><circle cx="18" cy="10" r="1.6"/><path d="M8.5 16.4c0-2.4 1.6-3.8 3.5-3.8s3.5 1.4 3.5 3.8c0 1.9-1.6 2.9-3.5 2.9s-3.5-1-3.5-2.9z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <h3>Flea Treatments</h3>
             <p>End-of-lease and rental vacate flea treatments with a certificate of treatment — the standard requirement for tenants and property managers.</p>
@@ -247,7 +247,7 @@
               <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>The right technology for the job</b><p>When a job calls for it, we bring in advanced detection technology to pick up activity the naked eye can't.</p></div></li>
               <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>We stand behind our work</b><p>Clear reporting, service warranties and a real person who answers the phone if anything's not right.</p></div></li>
             </ul>
-            <a class="btn btn--glass mt-3" href="about.html">More about us
+            <a class="btn btn--glass mt-3" href="/about">More about us
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
@@ -292,12 +292,12 @@
             <h2 style="font-size:var(--fs-h2);margin-top:.7rem;">Based in Gosnells,<br>servicing greater Perth</h2>
             <p style="color:var(--text-soft);margin-top:1rem;font-size:var(--fs-lead);">Our home base is Gosnells and we focus on a 50 km radius across the south-eastern suburbs — but our long-standing clients stretch from <strong style="color:var(--text)">Moora in the north</strong> to <strong style="color:var(--text)">Donnybrook in the south</strong>. If you're not sure we reach you, just ask.</p>
             <div class="chips">
-              <a class="chip" href="about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Gosnells</a>
-              <a class="chip" href="pest-control-thornlie.html">Thornlie</a><a class="chip" href="pest-control-canning-vale.html">Canning Vale</a><a class="chip" href="pest-control-armadale.html">Armadale</a>
-              <a class="chip" href="pest-control-southern-river.html">Southern River</a><a class="chip" href="pest-control-maddington.html">Maddington</a><a class="chip" href="pest-control-kelmscott.html">Kelmscott</a>
-              <a class="chip" href="pest-control-byford.html">Byford</a><a class="chip" href="pest-control-cannington.html">Cannington</a><a class="chip" href="contact.html">+ greater Perth</a>
+              <a class="chip" href="/about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Gosnells</a>
+              <a class="chip" href="/pest-control-thornlie">Thornlie</a><a class="chip" href="/pest-control-canning-vale">Canning Vale</a><a class="chip" href="/pest-control-armadale">Armadale</a>
+              <a class="chip" href="/pest-control-southern-river">Southern River</a><a class="chip" href="/pest-control-maddington">Maddington</a><a class="chip" href="/pest-control-kelmscott">Kelmscott</a>
+              <a class="chip" href="/pest-control-byford">Byford</a><a class="chip" href="/pest-control-cannington">Cannington</a><a class="chip" href="/contact">+ greater Perth</a>
             </div>
-            <a class="btn btn--glass mt-3" href="contact.html">Check your area
+            <a class="btn btn--glass mt-3" href="/contact">Check your area
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
@@ -388,7 +388,7 @@
             <p>Book a thorough inspection or a general treatment with Perth's local termite and pest experts. Honest advice, upfront pricing, lasting results.</p>
           </div>
           <div class="cta-actions">
-            <a class="btn btn--lg" href="contact.html#book">Book an inspection</a>
+            <a class="btn btn--lg" href="/contact#book">Book an inspection</a>
             <a class="btn btn--glass btn--lg" href="tel:+61411240281">Call 0411 240 281</a>
           </div>
         </div>
@@ -408,20 +408,33 @@
         <div class="footer-col">
           <h3>Services</h3>
           <ul>
-            <li><a href="termites.html">Termite Management</a></li>
-            <li><a href="services.html#general">General Pest Control</a></li>
-            <li><a href="services.html#rodents">Rodent Control</a></li>
-            <li><a href="services.html#spiders">Spiders &amp; Wasps</a></li>
-            <li><a href="services.html#commercial">Commercial &amp; Strata</a></li>
+            <li><a href="/termites">Termite Management</a></li>
+            <li><a href="/services#general">General Pest Control</a></li>
+            <li><a href="/services#rodents">Rodent Control</a></li>
+            <li><a href="/services#spiders">Spiders &amp; Wasps</a></li>
+            <li><a href="/services#commercial">Commercial &amp; Strata</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h3>Company</h3>
           <ul>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="services.html">All services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact.html#book">Book an inspection</a></li>
+            <li><a href="/about">About us</a></li>
+            <li><a href="/services">All services</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/contact#book">Book an inspection</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Service areas</h3>
+          <ul>
+            <li><a href="/pest-control-thornlie">Thornlie</a></li>
+            <li><a href="/pest-control-canning-vale">Canning Vale</a></li>
+            <li><a href="/pest-control-armadale">Armadale</a></li>
+            <li><a href="/pest-control-southern-river">Southern River</a></li>
+            <li><a href="/pest-control-maddington">Maddington</a></li>
+            <li><a href="/pest-control-kelmscott">Kelmscott</a></li>
+            <li><a href="/pest-control-byford">Byford</a></li>
+            <li><a href="/pest-control-cannington">Cannington</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -437,8 +450,8 @@
       <div class="footer-bottom">
         <span>© <span id="year">2026</span> Farrmill Pest Control. All rights reserved.</span>
         <span class="legal">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
         </span>
       </div>
     </div>
@@ -450,7 +463,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       Call
     </a>
-    <a class="btn" href="contact.html#book">Book now</a>
+    <a class="btn" href="/contact#book">Book now</a>
   </div>
 
   <script src="assets/js/main.js?v=20" defer></script>

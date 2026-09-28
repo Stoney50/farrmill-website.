@@ -6,3 +6,4 @@ Website Imagery - AI Prompts (Draft).md
 wrangler.jsonc
 .gitignore
 .assetsignore
+.wrangler/
