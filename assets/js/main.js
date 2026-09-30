@@ -267,6 +267,9 @@
           var el = form.querySelector('[name="' + name + '"]');
           if (el) payload[name] = el.value;
         });
+        // Date inputs always submit YYYY-MM-DD; send it as DD/MM/YYYY for the email.
+        var ymd = /^(\d{4})-(\d{2})-(\d{2})$/.exec(payload.date || "");
+        if (ymd) payload.date = ymd[3] + "/" + ymd[2] + "/" + ymd[1];
 
         fetch("https://api.web3forms.com/submit", {
           method: "POST",
