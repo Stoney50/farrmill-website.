@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P0E42HNM4Y"></script>
+  <!-- Google tag (gtag.js). Commands queue now; the library loads on first
+       interaction or 4s after page load so it doesn't compete with page content. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-P0E42HNM4Y');
+
+    (function () {
+      var loaded = false;
+      var events = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+      function loadGtag() {
+        if (loaded) return;
+        loaded = true;
+        events.forEach(function (e) { window.removeEventListener(e, loadGtag); });
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-P0E42HNM4Y';
+        document.head.appendChild(s);
+      }
+      events.forEach(function (e) { window.addEventListener(e, loadGtag, { once: true, passive: true }); });
+      window.addEventListener('load', function () { setTimeout(loadGtag, 4000); });
+    })();
   </script>
 
   <meta charset="UTF-8" />
